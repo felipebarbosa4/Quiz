@@ -17,7 +17,7 @@ import algonquin.cst2335.quiz.Activities.SetsActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    CardView history, science;
+    CardView history, science, math, programming;
 
     private TextView userNameTextView;
 
@@ -46,8 +46,43 @@ public class MainActivity extends AppCompatActivity {
 
         history = findViewById(R.id.history);
         science = findViewById(R.id.science);
+        math = findViewById(R.id.math);
+        programming = findViewById(R.id.programming);
 
         history.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(MainActivity.this, SetsActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
+        programming.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(MainActivity.this, SetsActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
+        science.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(MainActivity.this, SetsActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
+        math.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {

@@ -18,7 +18,6 @@ import algonquin.cst2335.quiz.R;
 public class SplashScreenActivity extends AppCompatActivity {
 
     private EditText userNameEditText;
-    private TextView lastLoginTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +26,7 @@ public class SplashScreenActivity extends AppCompatActivity {
 
         userNameEditText = findViewById(R.id.usernameEditText);
         Button continueButton = findViewById(R.id.startButton);
-        lastLoginTextView = findViewById(R.id.lastLoginTextView);
+        TextView lastLoginTextView = findViewById(R.id.lastLoginTextView);
 
         // Get the last login username from SharedPreferences
         SharedPreferences preferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
