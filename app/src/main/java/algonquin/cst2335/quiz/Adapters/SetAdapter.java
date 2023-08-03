@@ -68,7 +68,7 @@ public class SetAdapter extends RecyclerView.Adapter<SetAdapter.viewHolder> {
         return list.size();
     }
 
-    public class viewHolder extends RecyclerView.ViewHolder {
+    public static class viewHolder extends RecyclerView.ViewHolder {
 
         ItemSetsBinding binding;
 
