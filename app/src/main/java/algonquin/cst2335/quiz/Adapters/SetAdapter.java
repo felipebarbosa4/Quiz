@@ -22,6 +22,7 @@ import algonquin.cst2335.quiz.databinding.ItemSetsBinding;
 
 public class SetAdapter extends RecyclerView.Adapter<SetAdapter.viewHolder> {
 
+
     Context context;
     ArrayList<SetModel> list;
 

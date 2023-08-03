@@ -1,10 +1,12 @@
 package algonquin.cst2335.quiz.Activities;
 
 import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.os.Bundle;
+import android.widget.NumberPicker;
 
 import com.google.android.material.snackbar.Snackbar;
 
@@ -26,6 +28,8 @@ public class SetsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        int categoryID = getIntent().getIntExtra("CATEGORY_ID", 0); // Use a default value that makes sense for your app.
+
         binding = ActivitySetsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
@@ -41,19 +45,25 @@ public class SetsActivity extends AppCompatActivity {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         binding.setsRecy.setLayoutManager(linearLayoutManager);
 
-        list.add(new SetModel("SET-1"));
-        list.add(new SetModel("SET-2"));
-        list.add(new SetModel("SET-3"));
-        list.add(new SetModel("SET-4"));
-        list.add(new SetModel("SET-5"));
-        list.add(new SetModel("SET-6"));
-        list.add(new SetModel("SET-7"));
-        list.add(new SetModel("SET-8"));
-        list.add(new SetModel("SET-9"));
-        list.add(new SetModel("SET-10"));
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Enter the number of questions");
+
+        final NumberPicker numberPicker = new NumberPicker(this);
+        numberPicker.setMaxValue(50);
+        numberPicker.setMinValue(1);
+
+        builder.setView(numberPicker);
+        builder.setPositiveButton("OK", (dialog, which) -> {
+            int numQuestions = numberPicker.getValue();
+
+            String url = "https://opentdb.com/api.php?amount=" + numQuestions + "&category=" + categoryID + "&type=multiple";
 
 
-        SetAdapter adapter = new SetAdapter(this,list);
-        binding.setsRecy.setAdapter(adapter);
+            SetAdapter adapter = new SetAdapter(this, list);
+            binding.setsRecy.setAdapter(adapter);
+        });
+
+        builder.show();
+
     }
 }

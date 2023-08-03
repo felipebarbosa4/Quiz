@@ -14,6 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import algonquin.cst2335.quiz.Activities.SetsActivity;
+import algonquin.cst2335.quiz.Models.SetModel;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -49,11 +50,15 @@ public class MainActivity extends AppCompatActivity {
         math = findViewById(R.id.math);
         programming = findViewById(R.id.programming);
 
+        SetModel category = new SetModel("",0);
+
         history.setOnClickListener(new View.OnClickListener() {
+
 
             @Override
             public void onClick(View view) {
 
+                category.setCategoryId(23);
                 Intent intent = new Intent(MainActivity.this, SetsActivity.class);
                 startActivity(intent);
 
