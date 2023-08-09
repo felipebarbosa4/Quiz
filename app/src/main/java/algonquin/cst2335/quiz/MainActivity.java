@@ -52,32 +52,50 @@ public class MainActivity extends AppCompatActivity {
 
         SetModel category = new SetModel("",0);
 
-        history.setOnClickListener(view -> {
-            category.setCategoryId(23);
-            Intent intent = new Intent(MainActivity.this, SetsActivity.class);
-            intent.putExtra("CATEGORY_ID", category.getCategoryId());  // Pass the category ID as an extra
-            startActivity(intent);
+        history.setOnClickListener(new View.OnClickListener() {
+
+
+            @Override
+            public void onClick(View view) {
+
+                category.setCategoryId(23);
+                Intent intent = new Intent(MainActivity.this, SetsActivity.class);
+                startActivity(intent);
+
+            }
         });
 
-        programming.setOnClickListener(view -> {
-            category.setCategoryId(18);
-            Intent intent = new Intent(MainActivity.this, SetsActivity.class);
-            intent.putExtra("CATEGORY_ID", category.getCategoryId());
-            startActivity(intent);
+        programming.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(MainActivity.this, SetsActivity.class);
+                startActivity(intent);
+
+            }
         });
 
-        science.setOnClickListener(view -> {
-            category.setCategoryId(17);
-            Intent intent = new Intent(MainActivity.this, SetsActivity.class);
-            intent.putExtra("CATEGORY_ID", category.getCategoryId());
-            startActivity(intent);
+        science.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(MainActivity.this, SetsActivity.class);
+                startActivity(intent);
+
+            }
         });
 
-        math.setOnClickListener(view -> {
-            category.setCategoryId(19);
-            Intent intent = new Intent(MainActivity.this, SetsActivity.class);
-            intent.putExtra("CATEGORY_ID", category.getCategoryId());
-            startActivity(intent);
+        math.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(MainActivity.this, SetsActivity.class);
+                startActivity(intent);
+
+            }
         });
 
     }
