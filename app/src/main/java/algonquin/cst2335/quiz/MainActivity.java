@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         math = findViewById(R.id.math);
         programming = findViewById(R.id.programming);
 
-        SetModel category = new SetModel("",0);
+//        SetModel category = new SetModel("",0);
 
         history.setOnClickListener(new View.OnClickListener() {
 
@@ -58,8 +58,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                category.setCategoryId(23);
+//                category.setCategoryId(23);
                 Intent intent = new Intent(MainActivity.this, SetsActivity.class);
+                intent.putExtra("category", "History");
                 startActivity(intent);
 
             }
@@ -71,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent intent = new Intent(MainActivity.this, SetsActivity.class);
+                intent.putExtra("category", "Programming");
                 startActivity(intent);
 
             }
@@ -82,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent intent = new Intent(MainActivity.this, SetsActivity.class);
+                intent.putExtra("category", "Science");
                 startActivity(intent);
 
             }
@@ -93,6 +96,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent intent = new Intent(MainActivity.this, SetsActivity.class);
+                intent.putExtra("category", "Math");
                 startActivity(intent);
 
             }

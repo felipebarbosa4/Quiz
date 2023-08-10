@@ -1,3 +1,33 @@
 <resources>
     <string name="app_name">Quiz</string>
+    <string name="welcome">Welcome</string>
+    <string name="history">History</string>
+    <string name="science">Science</string>
+    <string name="math">Math</string>
+    <string name="programming">Programming</string>
+    <string name="choose_category">Choose Category</string>
+    <string name="_20" translatable="false">20</string>
+    <string name="total_sets">Total sets</string>
+    <string name="_1000" translatable="false">1000</string>
+    <string name="total_questions">Total Questions</string>
+    <string name="choose_sets">Choose Sets</string>
+    <string name="next">Next</string>
+    <string name="option_4">Option 4</string>
+    <string name="option_3">Option 3</string>
+    <string name="option_2">Option 2</string>
+    <string name="option_1">Option 1</string>
+    <string name="_30" translatable="false">30</string>
+    <string name="_1_50" translatable="false">1/50</string>
+    <string name="how_many_heritage_properties_are_listed_in_the_world_heritage_list">How many heritage properties are listed in the World heritage List?</string>
+    <string name="quit">Quit</string>
+    <string name="top_10">TOP 10</string>
+    <string name="your_score">Your Score</string>
+    <string name="retry">Retry</string>
+    <string name="last_login_as">Last login was as:</string>
+    <string name="start">Start</string>
+    <string name="enter_user">Enter Username:</string>
+    <string name="set_1" translatable="false">SET-1</string>
+    <string name="opps_time_out">Opps Time Out...</string>
+    <string name="share">Share</string>
+    <string name="try_again">Try Again</string>
 </resources>

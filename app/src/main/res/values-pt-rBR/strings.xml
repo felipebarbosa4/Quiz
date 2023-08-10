@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Quiz</string>
+    <string name="welcome">Bem Vindo</string>
+    <string name="history">Historia</string>
+    <string name="science">Ciencia</string>
+    <string name="math">Matematica</string>
+    <string name="programming">Programaçao</string>
+    <string name="choose_category">Escolha a Categoria</string>
+    <string name="total_sets">Total de Sequencia</string>
+    <string name="total_questions">Total de Questoes</string>
+    <string name="choose_sets">Escolhe um Set</string>
+    <string name="next">Proximo</string>
+    <string name="option_4">Opção 4</string>
+    <string name="option_3">Opção 4</string>
+    <string name="option_2">Opção 2</string>
+    <string name="option_1">Opção 1</string>
+    <string name="how_many_heritage_properties_are_listed_in_the_world_heritage_list">Quantos bens patrimoniais estão listados na Lista do Patrimônio Mundial?</string>
+    <string name="share">Compartilhar</string>
+    <string name="quit">Sair</string>
+    <string name="top_10">10 Melhores</string>
+    <string name="your_score">Seu Placar</string>
+    <string name="retry">Tentar Novamente</string>
+    <string name="last_login_as">O ultimo Login foi como :</string>
+    <string name="start">Iniciar</string>
+    <string name="enter_user">Entre com Usuario:</string>
+    <string name="opps_time_out">Opa, tempo acabou...</string>
+    <string name="try_again">Tentar Novamente</string>
+</resources>

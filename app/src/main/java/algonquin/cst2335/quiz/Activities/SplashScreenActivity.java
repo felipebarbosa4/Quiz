@@ -1,5 +1,9 @@
 package algonquin.cst2335.quiz.Activities;
 
+/**
+ * SplashScreenActivity.java
+ */
+
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -15,10 +19,30 @@ import androidx.appcompat.app.AppCompatActivity;
 import algonquin.cst2335.quiz.MainActivity;
 import algonquin.cst2335.quiz.R;
 
+/**
+ * This activity is the first activity that the user sees when they open the app.
+ * It asks the user to enter a username and then stores that username in SharedPreferences.
+ * The username is then displayed in the next activity (MainActivity).
+ * If the user has already logged in before, the last username is displayed in the TextView.
+ * If the user has not logged in before, the TextView is empty.
+ * The user cannot continue to the next activity (MainActivity) unless they enter a username.
+ * @author Felipe Barbosa Figueira
+ *
+ * @see AppCompatActivity
+ *
+ *
+ */
 public class SplashScreenActivity extends AppCompatActivity {
 
     private EditText userNameEditText;
 
+    /**
+     * This method is called when the activity is starting.
+     * @param savedInstanceState If the activity is being re-initialized after
+     *     previously being shut down then this Bundle contains the data it most
+     *     recently supplied in {@link #onSaveInstanceState}.  <b><i>Note: Otherwise it is null.</i></b>
+     *
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +57,12 @@ public class SplashScreenActivity extends AppCompatActivity {
         String lastLoginUsername = preferences.getString("userName", "");
         lastLoginTextView.setText("Last login was as: " + lastLoginUsername);
 
+        /**
+         * This method is called when the user clicks the "Continue" button.
+         * It gets the username from the EditText and stores it in SharedPreferences.
+         * It then starts the next activity (MainActivity).
+         * @param v The view that was clicked.
+         */
         continueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -1,4 +1,8 @@
 package algonquin.cst2335.quiz.Activities;
+/**
+ * This class is used to display the questions and answers to the user.
+ * @Author Felipe Barbosa Figueira
+ */
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
@@ -24,6 +28,9 @@ import algonquin.cst2335.quiz.Models.QuestionModel;
 import algonquin.cst2335.quiz.R;
 import algonquin.cst2335.quiz.databinding.ActivityQuestionBinding;
 
+/**
+ * This class is used to display the questions and answers to the user.
+ */
 public class QuestionActivity extends AppCompatActivity {
 
     ArrayList<QuestionModel> list = new ArrayList<>();
@@ -33,6 +40,9 @@ public class QuestionActivity extends AppCompatActivity {
     CountDownTimer timer;
     ActivityQuestionBinding binding;
 
+    /**
+     * This method is used to set the questions and answers for the first set.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -101,7 +111,9 @@ public class QuestionActivity extends AppCompatActivity {
 
         });
 
-
+        /**
+         * This method is used to set the questions and answers for the second set.
+         */
         AlertDialog.Builder builder = new AlertDialog.Builder(QuestionActivity.this);
         builder.setTitle("FUN ALERT")
                 .setMessage("CHATGPT IS NOT ALLOWED")
@@ -120,6 +132,9 @@ public class QuestionActivity extends AppCompatActivity {
                 .show();
     }
 
+    /**
+     * This method is used to set the questions and answers for the first set.
+     */
     private void resetTimer() {
 
         timer = new CountDownTimer(30500,1000) {
@@ -129,6 +144,7 @@ public class QuestionActivity extends AppCompatActivity {
                 binding.timer.setText(String.valueOf(l/1000));
 
             }
+
 
             @Override
             public void onFinish() {
@@ -157,10 +173,23 @@ public class QuestionActivity extends AppCompatActivity {
         };
     }
 
+    /**
+     * This method is used to set the questions and answers for the first set.
+     *
+     * @param view  This is the first parameter to checkAnswer method
+     * @param value  This is the second parameter to checkAnswer method
+     * @param data  This is the third parameter to checkAnswer method
+     */
     private void playAnimation(View view, int value, String data) {
 
         view.animate().alpha(value).scaleX(value).scaleY(value).setDuration(500).setStartDelay(100)
                 .setInterpolator(new DecelerateInterpolator()).setListener(new Animator.AnimatorListener() {
+
+                    /**
+                     * This method is used to set the questions and answers for the first set.
+                     *
+                     * @param animation  This is the first parameter to onAnimationStart method
+                     */
                     @Override
                     public void onAnimationStart(@NonNull Animator animation) {
 
@@ -188,6 +217,11 @@ public class QuestionActivity extends AppCompatActivity {
                     }
 
 
+                    /**
+                     * This method is used to set the questions and answers for the first set.
+                     *
+                     * @param animation  This is the first parameter to onAnimationEnd method
+                     */
                     @Override
                     public void onAnimationEnd(@NonNull Animator animation) {
 

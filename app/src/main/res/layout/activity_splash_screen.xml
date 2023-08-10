@@ -20,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Last login was as:"
+        android:text="@string/last_login_as"
         android:textSize="16sp"
         android:textStyle="bold" />
 
@@ -38,14 +38,14 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:minHeight="48dp"
-        android:hint="Enter your username" />
+        android:hint="@string/enter_user" />
 
     <Button
         android:id="@+id/startButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Start"
+        android:text="@string/start"
         android:onClick="startButtonClicked" />
 
 </LinearLayout>
